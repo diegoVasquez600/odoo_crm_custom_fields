@@ -27,7 +27,7 @@ class CrmLead(models.Model):
     # if the lead has been operated, this field will be filled with the operation details else not shown
     x_operation_details = fields.Text(string=_("Operation Details"), required=False, translate=True, 
                                       help=_("Details of the operation the lead had in Colombia Care, if any, separated by commas."))
-    x_medical_summary = fields.Many2one('crm.medical.summary', string=_("Medical Summary"), required=False, translate=True, 
+    x_medical_summary = fields.Many2one('crm.medical.summary', string=_("Medical Summary"), required=False, 
                                         help=_("The medical summary of the lead, if any."))
     x_has_appointment = fields.Boolean(string=_("Has appointment?"), required=False, translate=True, help=_("Does the lead have an appointment with Colombia Care?"))
     # if the lead has an appointment, this field will be filled with the date of the appointment else not shown

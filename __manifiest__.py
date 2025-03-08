@@ -1,5 +1,5 @@
 {
-    'Name': 'Custom Fields Colombia Care',
+    'name': 'Custom Fields Colombia Care',
     'version': '1.0',
     'category': 'Sales',
     'author': 'Diego Rios Vasquez',
@@ -9,5 +9,5 @@
         'views/crm_lead_view.xml',
     ],
     'installable': True,
-    'application': True,
+    'application': False,
 }

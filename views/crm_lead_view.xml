@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <data>
-        <record id="crm_lead_view_form" model="ir.ui.view">
-            <field name="name">crm.lead.form</field>
-            <field name="model">crm.lead</field>
-            <field name="arch" type="xml">
-                <xpath expr="//sheet" position="inside">
-                    <group string="Additional Information" colspan="2">
-                       <group>
-                            <field name="x_has_chatted"/>
-                            <field name="x_gender"/>
-                       </group>
-                       <group string="Operation Details">
-                            <field name="x_has_been_operated"/>
-                            <field name="x_operation_details" attrs="{'invisible': [('x_has_been_operated', '=', False)]}"/>
-                       </group>
-                       <group string="Appointment Details">
-                            <field name="x_has_appointment"/>
-                            <field name="x_appointment_date" attrs="{'invisible': [('x_has_appointment', '=', False)]}"/>
-                       </group>
-                       <group>
-                            <field name="x_preferred_language"/>
-                            <field name="x_messages_count_from_lead"/>
-                        </group>
-                        <group string="Follow-up Details">
-                            <field name="x_next_follow_up"/>
-                            <field name="x_first_contact_date"/>
-                            <field name="x_last_contact_date"/>
-                        </group>
-                        <group string="Medical Details">
-                            <field name="x_medical_summary" widget="many2one_form" options="{'no_create': False}"/>
-                            <field name="x_service_of_interest"/>
-                        </group>
-                    </group>
-                </xpath>
-            </field>
-        </record>
-    </data>
+  <data>
+    <record id="crm_lead_form_inherit_custom" model="ir.ui.view">
+      <field name="name">crm.lead.form.inherit.custom</field>
+      <field name="model">crm.lead</field>
+      <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//sheet" position="inside">
+          <group string="Additional Information" colspan="2">
+            <group>
+              <field name="x_has_chatted"/>
+              <field name="x_gender"/>
+            </group>
+            <group string="Operation Details">
+              <field name="x_has_been_operated"/>
+              <field name="x_operation_details" attrs="{'invisible': [('x_has_been_operated', '=', False)]}"/>
+            </group>
+            <group string="Appointment Details">
+              <field name="x_has_appointment"/>
+              <field name="x_appointment_date" attrs="{'invisible': [('x_has_appointment', '=', False)]}"/>
+            </group>
+            <group>
+              <field name="x_preferred_language"/>
+              <field name="x_messages_count_from_lead"/>
+            </group>
+            <group string="Follow-up Details">
+              <field name="x_next_follow_up"/>
+              <field name="x_first_contact_date"/>
+              <field name="x_last_contact_date"/>
+            </group>
+            <group string="Medical Details">
+              <field name="x_medical_summary" widget="many2one_form" options="{'no_create': False}"/>
+              <field name="x_service_of_interest"/>
+            </group>
+          </group>
+        </xpath>
+      </field>
+    </record>
+  </data>
 </odoo>

@@ -1,10 +1,10 @@
 {
-    'Name': 'Custom Fields for Odoo CRM, Colombia Care',
+    'Name': 'Custom Fields Colombia Care',
     'version': '1.0',
     'category': 'Sales',
     'author': 'Diego Rios Vasquez',
     'website': 'https://www.linkedin.com/in/diegovasquez600/',
-    'depends' : ['crm'],
+    'depends' : ['base','crm'],
     'data': [
         'views/crm_lead_view.xml',
     ],

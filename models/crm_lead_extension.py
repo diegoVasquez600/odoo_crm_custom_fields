@@ -1,13 +1,14 @@
-from glob import translate
-import re
 from odoo import models, fields, _
 
 class CrmLead(models.Model):
     _inherit = 'crm.lead'
     x_has_chatted = fields.Boolean(string=_("Has chatted"), required=False, translate=True, 
                                    help=_("Has the lead chatted with a sales representative?, or has the lead been contacted by a sales representative?"))
-    x_gender = fields.Selection([('female', _("Female"), 'male', _("Male"), 'other', _("Other"))], string=_("Gender"), required=False, translate=True,
-        help=_("The genre of the lead."))
+    x_gender = fields.Selection([
+    ('female', _("Female")),
+    ('male', _("Male")),
+    ('other', _("Other"))
+    ], string=_("Gender"), required=False, translate=True, help=_("The genre of the lead."))
     # Service of interest
     x_service_of_interest = fields.Selection([
         ('hair_transplant', _("Hair Transplant")),
@@ -26,7 +27,7 @@ class CrmLead(models.Model):
     # if the lead has been operated, this field will be filled with the operation details else not shown
     x_operation_details = fields.Text(string=_("Operation Details"), required=False, translate=True, 
                                       help=_("Details of the operation the lead had in Colombia Care, if any, separated by commas."))
-    x_medical_summary = fields.Many2one('crm.medical.summary', 'lead_id', string=_("Medical Summary"), required=False, translate=True, 
+    x_medical_summary = fields.Many2one('crm.medical.summary', string=_("Medical Summary"), required=False, translate=True, 
                                         help=_("The medical summary of the lead, if any."))
     x_has_appointment = fields.Boolean(string=_("Has appointment?"), required=False, translate=True, help=_("Does the lead have an appointment with Colombia Care?"))
     # if the lead has an appointment, this field will be filled with the date of the appointment else not shown

@@ -9,5 +9,5 @@
         'views/crm_lead_view.xml',
     ],
     'installable': True,
-    'application': False,
+    'application': True,
 }

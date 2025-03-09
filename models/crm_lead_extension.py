@@ -41,4 +41,4 @@ class CrmLead(models.Model):
     x_next_follow_up = fields.Date(string=_("Next Follow Up"), required=False, help=_("The date of the next follow up with the lead."))
     x_first_contact_date = fields.Date(string=_("First Contact Date"), required=False, help=_("The date of the first contact with the lead."))
     x_last_contact_date = fields.Date(string=_("Last Contact Date"), required=False, help=_("The date of the last contact with the lead."))
-    x_messages_count_from_lead = fields.Integer(string=_("Messages Count from Lead"), required=False, translate=True, help=_("The number of messages sent by the lead."))
+    x_messages_count_from_lead = fields.Integer(string=_("Messages Count from Lead"), required=False, help=_("The number of messages sent by the lead."))

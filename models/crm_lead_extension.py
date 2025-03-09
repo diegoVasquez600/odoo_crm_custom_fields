@@ -2,7 +2,7 @@ from odoo import models, fields, _
 
 class CrmLead(models.Model):
     _inherit = 'crm.lead'
-    x_has_chatted = fields.Boolean(string=_("Has chatted"), required=False, translate=True, 
+    x_has_chatted = fields.Boolean(string=_("Has chatted"), required=False,
                                    help=_("Has the lead chatted with a sales representative?, or has the lead been contacted by a sales representative?"))
     x_gender = fields.Selection([
     ('female', _("Female")),
@@ -23,13 +23,13 @@ class CrmLead(models.Model):
         ('other', _("Other"))], string=_("Service of Interest"), required=False, translate=True, 
         help=_("The service the lead is interested in."))
     # has been operated in Colombia Care?
-    x_has_been_operated = fields.Boolean(string=_("Has been operated?"), required=False, translate=True, help=_("Has the lead been operated by Colombia Care?"))
+    x_has_been_operated = fields.Boolean(string=_("Has been operated?"), required=False, help=_("Has the lead been operated by Colombia Care?"))
     # if the lead has been operated, this field will be filled with the operation details else not shown
     x_operation_details = fields.Text(string=_("Operation Details"), required=False, translate=True, 
                                       help=_("Details of the operation the lead had in Colombia Care, if any, separated by commas."))
     x_medical_summary = fields.Many2one('crm.medical.summary', string=_("Medical Summary"), required=False, 
                                         help=_("The medical summary of the lead, if any."))
-    x_has_appointment = fields.Boolean(string=_("Has appointment?"), required=False, translate=True, help=_("Does the lead have an appointment with Colombia Care?"))
+    x_has_appointment = fields.Boolean(string=_("Has appointment?"), required=False, help=_("Does the lead have an appointment with Colombia Care?"))
     # if the lead has an appointment, this field will be filled with the date of the appointment else not shown
     x_appointment_date = fields.Date(string=_("Appointment Date"), required=False, translate=True, help=_("The date of the appointment with Colombia Care."))
     x_preferred_language = fields.Selection([

@@ -14,11 +14,11 @@
             </group>
             <group string="Operation Details">
               <field name="x_has_been_operated"/>
-              <field name="x_operation_details" attrs="{'invisible': [('x_has_been_operated', '=', False)]}"/>
+              <field name="x_operation_details"/>
             </group>
             <group string="Appointment Details">
               <field name="x_has_appointment"/>
-              <field name="x_appointment_date" attrs="{'invisible': [('x_has_appointment', '=', False)]}"/>
+              <field name="x_appointment_date"/>
             </group>
             <group>
               <field name="x_preferred_language"/>

@@ -74,6 +74,6 @@ odoo.define('odoo_crm_custom_fields.conditional_field', function (require) {
     });
 
     // Register the custom widgets in the field registry
-    fieldRegistry.add('conditional_text', ConditionalTextField);
-    fieldRegistry.add('conditional_date', ConditionalDateField);
+    fieldRegistry.add('x_operation_details_conditional', ConditionalTextField);
+    fieldRegistry.add('x_appointment_date_conditional', ConditionalDateField);
 });

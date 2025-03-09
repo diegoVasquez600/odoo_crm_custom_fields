@@ -14,11 +14,11 @@
             </group>
             <group string="Operation Details">
               <field name="x_has_been_operated"/>
-              <field name="x_operation_details" widget="conditional_text"/>
+              <field name="x_operation_details" widget="x_operation_details_conditional"/>
             </group>
             <group string="Appointment Details">
               <field name="x_has_appointment"/>
-              <field name="x_appointment_date" widget="conditional_date"/>
+              <field name="x_appointment_date" widget="x_appointment_date_conditional"/>
             </group>
             <group>
               <field name="x_preferred_language"/>

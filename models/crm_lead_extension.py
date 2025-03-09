@@ -8,7 +8,7 @@ class CrmLead(models.Model):
     ('female', _("Female")),
     ('male', _("Male")),
     ('other', _("Other"))
-    ], string=_("Gender"), required=False, translate=True, help=_("The genre of the lead."))
+    ], string=_("Gender"), required=False, help=_("The genre of the lead."))
     # Service of interest
     x_service_of_interest = fields.Selection([
         ('hair_transplant', _("Hair Transplant")),

@@ -20,7 +20,7 @@ class CrmLead(models.Model):
         ('eye_care', _("Eye Care")),
         ('dental_care', _("Dental Care")),
         ('biomedicine_services', _("Biomedicine Services")),
-        ('other', _("Other"))], string=_("Service of Interest"), required=False, translate=True, 
+        ('other', _("Other"))], string=_("Service of Interest"), required=False, 
         help=_("The service the lead is interested in."))
     # has been operated in Colombia Care?
     x_has_been_operated = fields.Boolean(string=_("Has been operated?"), required=False, help=_("Has the lead been operated by Colombia Care?"))
@@ -37,7 +37,7 @@ class CrmLead(models.Model):
         ('es', _("Spanish")),
         ('pt', _("Portuguese")),
         ('fr', _("French")),
-        ('de', _("German"))], string=_("Preferred Language"), required=False, translate=True, help=_("The language the lead prefers to communicate in."))
+        ('de', _("German"))], string=_("Preferred Language"), required=False, help=_("The language the lead prefers to communicate in."))
     x_next_follow_up = fields.Date(string=_("Next Follow Up"), required=False, translate=True, help=_("The date of the next follow up with the lead."))
     x_first_contact_date = fields.Date(string=_("First Contact Date"), required=False, translate=True, help=_("The date of the first contact with the lead."))
     x_last_contact_date = fields.Date(string=_("Last Contact Date"), required=False, translate=True, help=_("The date of the last contact with the lead."))

@@ -31,14 +31,14 @@ class CrmLead(models.Model):
                                         help=_("The medical summary of the lead, if any."))
     x_has_appointment = fields.Boolean(string=_("Has appointment?"), required=False, help=_("Does the lead have an appointment with Colombia Care?"))
     # if the lead has an appointment, this field will be filled with the date of the appointment else not shown
-    x_appointment_date = fields.Date(string=_("Appointment Date"), required=False, translate=True, help=_("The date of the appointment with Colombia Care."))
+    x_appointment_date = fields.Date(string=_("Appointment Date"), required=False, help=_("The date of the appointment with Colombia Care."))
     x_preferred_language = fields.Selection([
         ('en', _("English")),
         ('es', _("Spanish")),
         ('pt', _("Portuguese")),
         ('fr', _("French")),
         ('de', _("German"))], string=_("Preferred Language"), required=False, help=_("The language the lead prefers to communicate in."))
-    x_next_follow_up = fields.Date(string=_("Next Follow Up"), required=False, translate=True, help=_("The date of the next follow up with the lead."))
-    x_first_contact_date = fields.Date(string=_("First Contact Date"), required=False, translate=True, help=_("The date of the first contact with the lead."))
-    x_last_contact_date = fields.Date(string=_("Last Contact Date"), required=False, translate=True, help=_("The date of the last contact with the lead."))
+    x_next_follow_up = fields.Date(string=_("Next Follow Up"), required=False, help=_("The date of the next follow up with the lead."))
+    x_first_contact_date = fields.Date(string=_("First Contact Date"), required=False, help=_("The date of the first contact with the lead."))
+    x_last_contact_date = fields.Date(string=_("Last Contact Date"), required=False, help=_("The date of the last contact with the lead."))
     x_messages_count_from_lead = fields.Integer(string=_("Messages Count from Lead"), required=False, translate=True, help=_("The number of messages sent by the lead."))

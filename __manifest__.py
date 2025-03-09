@@ -8,6 +8,11 @@
     'data': [
         'views/crm_lead_view.xml',
     ],
+    'assets': {
+        'web.assets_backend': [
+            'odoo_crm_customfields/static/src/js/conditional_field.js',
+        ],
+    },
     'installable': True,
     'application': False,
 }
